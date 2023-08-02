@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced RTMP Video Player</title>
+  <style>
+    #video-container {
+      position: relative;
+      width: 640px;
+      height: 480px;
+    }
+
+    #video-player {
+      width: 100%;
+      height: 100%;
+    }
+
+    #play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <video width="640" height="480" controls>
+    <source src="http://your-media-server-url/your-hls-stream.m3u8" type="application/x-mpegURL">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>

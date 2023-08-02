@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <head>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+  </head>
   <title>Advanced RTMP Video Player</title>
   <style>
     #video-container {
@@ -29,9 +33,17 @@
   </style>
 </head>
 <body>
-  <video width="1920" height="1080" controls>
-    <source src="rtmp://live.restream.io/pull/play_7022975_23c2e3d93890f6c5dd11" type="application/x-mpegURL">
-    Your browser does not support the video tag.
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264">
+    <source src="rtmp://live.restream.io/pull/play_7022975_23c2e3d93890f6c5dd11" type='rtmp/mp4'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
   </video>
+
+  <script>
+    var player = videojs('my-video');
+    player.play();
+  </script>
 </body>
 </html>

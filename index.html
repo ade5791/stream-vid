@@ -40,13 +40,14 @@
 </head>
 
 <body>
-  <video id="my-video" class="video-js" controls preload="auto" width="1920" height="1080">
+  <video id="my-video" class="video-js" controls preload="auto" width="1920" height="1080" autoplay playsinline>
     <source src="https://rbmn-live.akamaized.net/hls/live/728223/VID_TEST/master.m3u8" type='application/x-mpegURL'>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
       <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
     </p>
   </video>
+
   <script>
     var player = videojs('my-video');
 
@@ -54,6 +55,14 @@
       player.requestFullscreen();
     });
   </script>
+</body>
+
+  <style>
+    .video-js {
+      border: none;
+      outline: none;
+    }
+  </style>
 </body>
 
 

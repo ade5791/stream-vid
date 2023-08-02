@@ -40,17 +40,9 @@
 </head>
 
 <body>
-  <video id="my-video" class="video-js" controls preload="auto" width="1920" height="1080">
-    <source src="https://hls.restream.io/live/play_7022975_23c2e3d93890f6c5dd11" type='application/x-mpegURL'>
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
-  <script>
-    var player = videojs('my-video');
-    player.play();
-  </script>
+  <iframe src="https://embed.restream.io/player/index.html?token=play_7022975_23c2e3d93890f6c5dd11" width="640" height="360" frameborder="0"
+    allowfullscreen>
+  </iframe>
 </body>
 
 

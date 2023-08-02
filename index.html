@@ -47,17 +47,13 @@
       <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
     </p>
   </video>
-    <script>
-      var player = videojs('my-video');
+  <script>
+    var player = videojs('my-video');
 
-      function toggleFullscreen() {
-        if (player.isFullscreen()) {
-          player.exitFullscreen();
-        } else {
-          player.requestFullscreen();
-        }
-      }
-    </script>
+    player.ready(function () {
+      player.requestFullscreen();
+    });
+  </script>
 </body>
 
 

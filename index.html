@@ -36,10 +36,10 @@
       padding: 10px 20px;
       cursor: pointer;
     }
-     .video-js {
-      border: none;
-      outline: none;
-    }
+    .video-js {
+  border: none !important;
+  outline: none !important;
+}
   </style>
 </head>
 
@@ -67,7 +67,7 @@
         videoElement.msRequestFullscreen();
       }
     });
-      var playButton = document.getElementById('play-button');
+      var playButton = document.querySelector('button[title="Play Video"]');
         playButton.addEventListener('click', function () {
           // Request fullscreen when the play button is clicked
           if (videoElement.requestFullscreen) {

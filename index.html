@@ -67,6 +67,19 @@
         videoElement.msRequestFullscreen();
       }
     });
+      var playButton = document.getElementById('play-button');
+        playButton.addEventListener('click', function () {
+          // Request fullscreen when the play button is clicked
+          if (videoElement.requestFullscreen) {
+            videoElement.requestFullscreen();
+          } else if (videoElement.mozRequestFullScreen) {
+            videoElement.mozRequestFullScreen();
+          } else if (videoElement.webkitRequestFullscreen) {
+            videoElement.webkitRequestFullscreen();
+          } else if (videoElement.msRequestFullscreen) {
+            videoElement.msRequestFullscreen();
+          }
+        });
   </script>
 </body>
 
